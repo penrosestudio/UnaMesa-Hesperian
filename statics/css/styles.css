@@ -1,0 +1,156 @@
+/**********
+	General
+**********/
+
+body {
+	background-color: #F2F2F2;
+	font-family: 'PT Sans', lucida sans, helvetica, arial, serif;
+}
+
+button {
+	cursor: pointer;
+}
+
+.left {
+	float: left;
+}
+
+.clear {
+	clear: both;
+}
+
+#mainpane {
+
+}
+
+/**********
+	Header
+**********/
+
+#header_ambit {
+	height: 40px;
+	padding-top: 0px;
+	background-color: #221e1e;
+	background-image: -moz-linear-gradient(top, #221e1e, #545151); /* FF3.6 */
+	background-image: -o-linear-gradient(top, #221e1e, #545151); /* Opera 11.10+ */
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #221e1e),color-stop(1, #545151)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(#221e1e, #545151); /* Chrome 10+, Saf5.1+ */
+	background-image: linear-gradient(top, #221e1e, #545151);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#221e1e', EndColorStr='#545151'); /* IE6ÐIE9 */
+	border-bottom: 1px solid #878787;
+	color: #f1f1f1;
+	position: fixed;
+	width: 110%;
+	left: -5%;
+	padding-left: 5%;
+	z-index: 10;	
+	-moz-box-shadow: 0px 2px 2px #333;
+	-webkit-box-shadow: 0px 2px 2px #333; 
+	box-shadow: 0px 2px 2px #333;
+}
+
+#header {
+	height: 50px;
+	position: relative;
+	color: #FFF;
+	
+	background-color: #545451;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#545451), to(#221e21)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #545451, #221e21); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #545451, #221e21); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #545451, #221e21); /* IE10 */
+	background-image:      -o-linear-gradient(top, #545451, #221e21); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #545451, #221e21);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#545451', EndColorStr='#221e21'); /* IE6-IE9 */
+	
+
+	-webkit-box-shadow: 0px 2px 4px #AEAEAE;
+	-moz-box-shadow: 0px 2px 4px #AEAEAE;
+	box-shadow: 0px 2px 4px #AEAEAE;
+
+	
+}
+#header h1 {
+	float: left;
+	font-size: 1.2em;
+	line-height: 50px;
+}
+#header .menu {
+	float: right;
+	margin-top: 10px;
+}
+#header form, #header button {
+	display: inline;
+}
+#header form input, #header button {
+    -moz-border-radius: 5px 5px 5px 5px;
+    -moz-box-shadow: 0 0 10px #000000 inset;
+    color: #FFF;
+    letter-spacing: 0.1em;
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: transparent;
+    border-color: -moz-use-text-color -moz-use-text-color #333 -moz-use-text-color;
+    border-style: none none solid none;
+    border-width: medium medium 1px medium;
+    
+}
+
+/**********
+	Tiddler
+**********/
+div.tiddler {
+	background-color: #FFF;
+	padding: 20px 0 20px 20px;
+	margin-bottom: 20px;
+}
+
+.tiddler h2 {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+#tiddlerGettingStarted {
+	width: 460px;
+}
+#tiddlerGettingStarted .headingPanel {
+	display: none;
+}
+
+/************
+	Handbooks
+************/
+.tiddler .handbook {
+	padding-top: 15px;
+	margin-right: 26px;
+	border-top: 1px #CCC solid;
+	float: left;
+	width: 280px;
+}
+.tiddler .handbook h3 {
+	font-size: 1.1em;
+	font-weight: bold;
+}
+.tiddler .handbook .imgContainer .left {
+	position: relative;
+}
+.tiddler .handbook img {
+	height: 190px;
+}
+.tiddler .handbook button {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	
+	background-color: #F4F4F4;
+	border: 1px solid silver;
+    font-size: 0.7em;
+    height: 30px;
+    padding: 2px 5px;
+}
+.tiddler .handbook div.meta {
+	clear: both;
+}
+.tiddler .handbook div.meta p {
+	margin-bottom: 0;
+}

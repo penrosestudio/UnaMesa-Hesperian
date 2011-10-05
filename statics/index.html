@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<script id="versionArea" type="text/javascript">
+//<![CDATA[
+var version = {title: "TiddlyWiki", major: 2, minor: 6, revision: 2, date: new Date("Jan 6, 2011"), extensions: {}};
+//]]>
+</script>
+<script type="text/javascript" src="js/jquery-1.6.js"></script>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="copyright" content="
+TiddlyWiki created by Jeremy Ruston, (jeremy [at] osmosoft [dot] com)
+
+Copyright (c) Jeremy Ruston 2004-2007
+Copyright (c) UnaMesa Association 2007-2011
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+Redistributions of source code must retain the above copyright notice, this
+list of conditions and the following disclaimer.
+
+Redistributions in binary form must reproduce the above copyright notice, this
+list of conditions and the following disclaimer in the documentation and/or other
+materials provided with the distribution.
+
+Neither the name of the UnaMesa Association nor the names of its contributors may be
+used to endorse or promote products derived from this software without specific
+prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS 'AS IS' AND ANY
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
+DAMAGE.
+" />
+<!--PRE-HEAD-START-->
+<!--{{{-->
+<link rel="shortcut icon" href="" />
+<link href="" rel="alternate"
+	type="application/atom+xml" title="" />
+
+<link rel="stylesheet" href="css/reset.css" />
+<link rel="stylesheet" href="css/j-base.css" />
+<link rel="stylesheet" href="css/styles.css" />
+
+<!--[if IE 6]>
+	<link rel="stylesheet" type="text/css" href="css/ie6.css" />
+<![endif]-->
+        
+<!--[if gte IE 8]>
+	<link rel="stylesheet" type="text/css" href="css/ie8.css">
+<![endif]-->
+
+
+<!--}}}-->
+<!--PRE-HEAD-END-->
+<title>
+UnaMesa theme
+</title>
+<style id="styleArea" type="text/css">
+body { margin:0px }
+#saveTest {display:none;}
+#messageArea {display:none;}
+#copyright {display:none;}
+#storeArea {display:none;}
+#storeArea div {padding:0.5em; margin:1em 0em 0em 0em; border-color:#fff #666 #444 #ddd; border-style:solid; border-width:2px; overflow:auto;}
+#shadowArea {display:none;}
+#javascriptWarning {width:100%; text-align:center; font-weight:bold; background-color:#dd1100; color:#fff; padding:1em 0em;}
+</style>
+
+<!--POST-HEAD-START-->
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans+Caption:regular,bold' rel='stylesheet' type='text/css'>
+<!--POST-HEAD-END-->
+</head>
+<body onload="main();" onunload="if(window.unload) unload();">
+<!--PRE-BODY-START-->
+<!--PRE-BODY-END-->
+<div id="copyright">
+Welcome to TiddlyWiki created by Jeremy Ruston; Copyright &copy; 2004-2007 Jeremy Ruston, Copyright &copy; 2007-2011 UnaMesa Association
+</div>
+<noscript>
+
+<div id="javascriptWarning">
+This page requires JavaScript to function properly.<br /><br />
+If you do not use JavaScript you may still <a href="http://ambit-theme.tiddlyspace.com/recipes/ambit-theme_private/tiddlers">browse
+the content of this wiki</a>.
+</div>
+
+</noscript>
+<div id="saveTest"></div>
+<div id="backstageCloak"></div>
+
+<div id="backstageButton"></div>
+<div id="backstageArea"><div id="backstageToolbar"></div></div>
+<div id="backstage">
+	<div id="backstagePanel"></div>
+</div>
+<div id="contentWrapper">
+	<div id="displayArea">
+	
+		<!-- HTML build here -->
+		<div id="header"> <!-- Moved header outside of mainpane -->
+			<div class="jbasewrap">
+				<h1><span id="SiteTitle">Hesperian Health Materials</span> <span id="SiteSubtitle">subtitle</span></h1>
+				<div class="menu">
+					<form action="/logout">
+						<input type="submit" value="Log out" />
+					</form>
+					<button>Advanced mode</button>
+				</div>
+			</div>
+		</div>
+		
+		<div id="mainpane" class="jbasewrap"> <!-- Moved sidebar into mainpane -->
+			<div id="tiddlerDisplay">
+				<div class="tiddler" id="tiddlerGettingStarted">
+					<div class="paperSheet">
+						<div class="headingPanel">
+							<h2 class="title">GettingStarted</h2>
+						</div>
+						<div class="content">
+							<h3>Hi Jonathan, Welcome to Your HomeSpace</h3>
+							<hr />
+							<p>Below is a list of your handbooks and templates. To create a new version of a handbook, click the duplicate button next to a handbook below. To edit one of your existing handbooks, click the edit button.</p>
+							<br class="clear" />
+						</div>
+					</div>
+				</div>
+				<div class="tiddler">
+					<div class="paperSheet">
+						<div class="headingPanel">
+							<h2 class="title">Your Handbooks</h2>
+						</div>
+						<div class="content">
+							<div class="handbook">
+								<h3>Danger Signs During Pregnancy</h3>
+								<div class="imgContainer">
+									<div class="left">
+										<img src="../mockups/handbook1.jpg" alt="Danger Signs During Pregnancy" />
+										<button>duplicate</button>
+									</div>
+								</div>
+								<div class="meta">
+									<p><strong>Language</strong>: English</p>
+									<p><strong>Pages</strong>: 1</p>
+									<p><strong>Topics</strong>: poster, pregnancy</p>
+								</div>
+							</div>
+							<div class="handbook">
+								<h3>Pregnancy And Nutrition</h3>
+								<div class="imgContainer">
+									<div class="left">
+										<img src="../mockups/handbook2.jpg" alt="Pregnancy And Nutrition" />
+										<button>duplicate</button>
+									</div>
+								</div>
+								<div class="meta">
+									<p><strong>Language</strong>: English</p>
+									<p><strong>Pages</strong>: 1</p>
+									<p><strong>Topics</strong>: poster, pregnancy</p>
+								</div>
+							</div>
+							<div class="handbook">
+								<h3>Rehydration</h3>
+								<div class="imgContainer">
+									<div class="left">
+										<img src="../mockups/handbook3.jpg" alt="Rehydration" />
+										<button>duplicate</button>
+									</div>
+								</div>
+								<div class="meta">
+									<p><strong>Language</strong>: English</p>
+									<p><strong>Pages</strong>: 1</p>
+									<p><strong>Topics</strong>: poster, pregnancy</p>
+								</div>
+							</div>
+							<br class="clear" />
+						</div>
+					</div>
+				</div>
+			</div> <!-- tiddlerDisplay -->
+		</div> <!-- mainpane -->
+	</div> <!-- displayArea -->
+</div>
+<div id="contentStash"></div>
+<div id="shadowArea">
+
+</div>
+<!--POST-SHADOWAREA-->
+<div id="storeArea">
+
+</div>
+<!--POST-STOREAREA-->
+<!--POST-BODY-START-->
+<!--POST-BODY-END-->
+
+<!--POST-SCRIPT-START-->
+<!--POST-SCRIPT-END-->
+
+</body>
+</html>
