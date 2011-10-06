@@ -5,6 +5,8 @@
 body {
 	background-color: #F2F2F2;
 	font-family: 'PT Sans', lucida sans, helvetica, arial, serif;
+	color: #5c5c5c;
+	font-size: 15px;
 }
 
 button {
@@ -21,6 +23,11 @@ button {
 
 #mainpane {
 
+}
+
+hr {
+	color: #e9e9e9;
+	background: #e9e9e9;
 }
 
 /**********
@@ -99,19 +106,26 @@ button {
 /**********
 	Tiddler
 **********/
-div.tiddler {
-	background-color: #FFF;
-	padding: 20px 0 20px 20px;
-	margin-bottom: 20px;
+div.box {
+	background-color: #FFF;	
+  -webkit-box-shadow: 0px 1px 2px #a3a3a3; 
+     -moz-box-shadow: 0px 1px 2px #a3a3a3; 
+          box-shadow: 0px 1px 2px #a3a3a3; 
+
+}
+
+.tiddler h3 {
+	font-size: 23px;
+	font-style: italic;
 }
 
 .tiddler h2 {
-	font-size: 1.5em;
+	font-size: 23px;
 	font-weight: bold;
 }
 
 #tiddlerGettingStarted {
-	width: 460px;
+	padding-bottom: 0px;
 }
 #tiddlerGettingStarted .headingPanel {
 	display: none;
@@ -122,14 +136,21 @@ div.tiddler {
 ************/
 .tiddler .handbook {
 	padding-top: 15px;
-	margin-right: 26px;
+	margin-right: 20px;
 	border-top: 1px #CCC solid;
 	float: left;
-	width: 280px;
+	width: 286px;
+	margin-bottom: 20px;
 }
+
+.tiddler .handbook:nth-child(3n + 3) {
+	margin-right: 0px;
+}
+
 .tiddler .handbook h3 {
-	font-size: 1.1em;
+	font-size: 15px;
 	font-weight: bold;
+	font-style: normal;
 }
 .tiddler .handbook .imgContainer .left {
 	position: relative;
@@ -150,7 +171,32 @@ div.tiddler {
 }
 .tiddler .handbook div.meta {
 	clear: both;
+	font-size: 13px;
 }
 .tiddler .handbook div.meta p {
 	margin-bottom: 0;
 }
+
+.imgContainer img {
+	margin: auto;
+	width: auto;
+}
+
+.imgContainer {
+	text-align: center;
+}
+
+.marginauto {
+	margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
