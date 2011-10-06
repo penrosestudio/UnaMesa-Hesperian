@@ -15,10 +15,10 @@ var iframeHost = window.iframeCommsTarget || "http://tiddlyspace.com",
 		.appendTo('body')
 		.get(0)
 		.contentWindow;
-	console.log('gateway added to page',iframeURL);
+	//console.log('gateway added to page',iframeURL);
 	$.receiveMessage(
 		function(e) {
-			console.log('host received message');
+			//console.log('host received message');
 			$(document).trigger('crossDomainAjaxLoaded'); // we could explicitly check for this status, but the first message shows it's working
 		},
 		iframeHost
