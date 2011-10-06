@@ -1,0 +1,482 @@
+/* reset.css from http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+body {
+	line-height: 1;
+	color: black;
+	background: white;
+}
+ol, ul {
+	list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+/* J-BASE */
+
+/* this is up to you */
+.jbasewrap {
+	width: 940px;
+}
+
+
+/*--------------------------Global */
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif;
+	letter-spacing: 0.02em;
+	color: #545454;
+	font-size: 62.5%;
+	background-position: 0px 0px;
+}
+
+.grid {
+	background-image: url(../images/24px6inc_grid.png);
+}
+
+.jbasewrap {
+	/*padding: 48px 0;*/
+	margin: auto;
+	font-size: 1.4em;
+	line-height: 1.714em;
+}
+
+a {
+	color: #fca961;
+	text-decoration: underline;
+}
+
+/*--------------------------Grid Modification */
+
+.grid4col, .grid2col {
+	/*margin-top: 0.071em; */
+} 
+
+
+
+
+/*--------------------------Typography */
+
+p {
+	font-size: 1em;
+	margin: 0 0 1.714em;
+}
+
+.smallcaps {
+	font-variant: small-caps;
+}
+
+
+strong {
+	font-weight: bold;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+dfn {
+	font-weight: bold;
+}
+
+em, dfn {
+	font-style: italic;	
+}
+
+address {
+	font-style: italic;
+	margin-bottom: 1.714em;
+}
+
+pre, code, tt {
+	font-family: 'andale mono','lucida console',monospace;
+}
+
+abbr, acronym {
+	border-bottom: 1px dotted;
+}
+
+table {
+	margin-bottom: 1.714em;
+}
+
+th {
+}
+
+ul, ol {
+	margin: 0 0 1.714em 1.714em;
+	
+}
+
+ul li {
+	list-style: disc;
+}
+
+ol li {
+	list-style: decimal;
+}
+
+li ul, li ol {
+	margin: 0 0 0  1.714em;
+} 
+
+dl dt {
+	font-weight: bold;
+}
+
+dd {
+	margin-left: 1.714em;
+}
+
+blockquote {
+	font-style: italic;
+	padding-left: 1.714em;
+}
+
+hr {
+	border: none;
+	height: 0.071em; /* ie. 1 px */
+	color: #858585;
+	background: #858585;
+	/* margin:  0.821em 0; */
+	margin: 0.786em 0; /* 0 0.857em; /* ie. 11 pixels above and 12 below = 24px total */
+}
+
+.small {
+	font-size: 0.75em;
+	line-height: 1.714em;
+	padding-top: 0.4em; /* Made UP! */
+	margin-bottom: 1.886em; /* 2.286 - 0.4em, where 2.286 = 24px when 1em = 10.5px */ 
+	
+}
+
+.large {
+	font-size: 1.5em;
+	line-height: 1.714em;
+	padding-top: 0em; /* Made UP! */
+	margin: -0.25em 0 1.3em; /* Made UP! */
+}
+
+sup {
+	vertical-align: top;
+	font-size: 0.75em;
+}
+sub {
+	vertical-align: bottom;
+	font-size: 0.75em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+
+
+h1 {
+	font-size: 2.25em;			/* 31.5px */
+	line-height: 1.333em; 		/* ie. 42px, seven 6px increments */
+	margin-bottom: 0.381em; 	/* ie 12px */
+}
+
+h2 {
+	font-size: 2em;				/* 28px */
+	line-height: 1.286em; 		/* ie 36px */
+	margin-bottom: 0.429em; 	/* 12px */
+}
+
+h3 {
+	font-size: 1.75em;			/* 24.5px */
+	line-height: 1.224em; 		/* ie 30px */
+	margin-bottom: 0.49em; 		/* 12px */
+}
+
+h4 {
+	font-size: 1.5em;			/* 21px */
+	line-height: 1.429em; 		/* ie 30px */
+	margin-bottom: 0.571em; 	/* 12px */
+}
+
+h5 {
+	font-size: 1.25em;			/* 17.5px */
+	line-height: 1.714em; 		/* ie 30px */
+	margin-bottom: 0.686em; 	/* ie 12px */
+}
+
+h6 {
+	font-size: 1em; 			/* 14px */
+	line-height: 1.714em;		/* 24px */
+	margin-bottom: 0.857em; 	/* 12px */
+	font-weight: ; 
+}
+
+
+
+
+
+
+/*--------------------------Colours */
+
+.orange {
+	color: #fbb75f;
+}
+
+
+
+
+/*--------------------------Div Modifiers */
+
+a.trigger {
+	position: fixed;
+	left: 0px;
+	top: 48px;
+	font-family: Helvetica, arial;
+	font-size: 1.05em;
+	padding: 1.2em;
+	background-color: #fff;
+	color: #555;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.box {
+	background-color: #ffeed3;
+	padding: 1.714em;
+	margin-bottom: 1.714em;
+}
+
+.last {
+	margin-bottom: 0;
+}
+
+.margintop {
+	margin-top: 24px;
+}
+.marginbottom {
+	margin-bottom: 24px;
+}
+
+.margintopsmall {
+	margin-top: 12px;
+}
+
+.padtop {
+	padding-top: 24px;
+}
+
+.padtopsmall {
+	padding-top: 12px;
+}
+
+.padbottom {
+	padding-bottom: 24px;
+}
+.padbottomsmall {
+	padding-bottom: 12px;
+}
+
+.rounded5 {
+	-moz-border-radius: 20px; /* FF1+ */
+	-webkit-border-radius: 20px; /* Saf3+, Chrome */
+	border-radius: 20px; /* Opera 10.5, IE 9 */	
+}
+
+.borderbottom {
+	border-bottom: #fbb75f 0.071em solid;
+}
+
+/*--------------------------Forms */
+
+
+/*--------------------------Buttons */
+
+
+/*--------------------------Recaptcha */
+
+/**********
+	General
+**********/
+
+body {
+	background-color: #F2F2F2;
+	font-family: 'PT Sans', lucida sans, helvetica, arial, serif;
+}
+
+button {
+	cursor: pointer;
+}
+
+.left {
+	float: left;
+}
+
+.clear {
+	clear: both;
+}
+
+#mainpane {
+
+}
+
+/**********
+	Header
+**********/
+
+#header_ambit {
+	height: 40px;
+	padding-top: 0px;
+	background-color: #221e1e;
+	background-image: -moz-linear-gradient(top, #221e1e, #545151); /* FF3.6 */
+	background-image: -o-linear-gradient(top, #221e1e, #545151); /* Opera 11.10+ */
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #221e1e),color-stop(1, #545151)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(#221e1e, #545151); /* Chrome 10+, Saf5.1+ */
+	background-image: linear-gradient(top, #221e1e, #545151);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#221e1e', EndColorStr='#545151'); /* IE6ÐIE9 */
+	border-bottom: 1px solid #878787;
+	color: #f1f1f1;
+	position: fixed;
+	width: 110%;
+	left: -5%;
+	padding-left: 5%;
+	z-index: 10;	
+	-moz-box-shadow: 0px 2px 2px #333;
+	-webkit-box-shadow: 0px 2px 2px #333; 
+	box-shadow: 0px 2px 2px #333;
+}
+
+#header {
+	height: 50px;
+	position: relative;
+	color: #FFF;
+	
+	background-color: #545451;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#545451), to(#221e21)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #545451, #221e21); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #545451, #221e21); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #545451, #221e21); /* IE10 */
+	background-image:      -o-linear-gradient(top, #545451, #221e21); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #545451, #221e21);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#545451', EndColorStr='#221e21'); /* IE6-IE9 */
+	
+
+	-webkit-box-shadow: 0px 2px 4px #AEAEAE;
+	-moz-box-shadow: 0px 2px 4px #AEAEAE;
+	box-shadow: 0px 2px 4px #AEAEAE;
+
+	
+}
+#header h1 {
+	float: left;
+	font-size: 1.2em;
+	line-height: 50px;
+}
+#header .menu {
+	float: right;
+	margin-top: 10px;
+}
+#header form, #header button {
+	display: inline;
+}
+#header form input, #header button {
+    -moz-border-radius: 5px 5px 5px 5px;
+    -moz-box-shadow: 0 0 10px #000000 inset;
+    color: #FFF;
+    letter-spacing: 0.1em;
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: transparent;
+    border-color: -moz-use-text-color -moz-use-text-color #333 -moz-use-text-color;
+    border-style: none none solid none;
+    border-width: medium medium 1px medium;
+    
+}
+
+/**********
+	Tiddler
+**********/
+div.tiddler {
+	background-color: #FFF;
+	padding: 20px 0 20px 20px;
+	margin-bottom: 20px;
+}
+
+.tiddler h2 {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+#tiddlerGettingStarted {
+	width: 460px;
+}
+#tiddlerGettingStarted .headingPanel {
+	display: none;
+}
+
+/************
+	Handbooks
+************/
+.tiddler .handbook {
+	padding-top: 15px;
+	margin-right: 26px;
+	border-top: 1px #CCC solid;
+	float: left;
+	width: 280px;
+}
+.tiddler .handbook h3 {
+	font-size: 1.1em;
+	font-weight: bold;
+}
+.tiddler .handbook .imgContainer .left {
+	position: relative;
+}
+.tiddler .handbook img {
+	height: 190px;
+}
+.tiddler .handbook button {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	
+	background-color: #F4F4F4;
+	border: 1px solid silver;
+    font-size: 0.7em;
+    height: 30px;
+    padding: 2px 5px;
+}
+.tiddler .handbook div.meta {
+	clear: both;
+}
+.tiddler .handbook div.meta p {
+	margin-bottom: 0;
+}
