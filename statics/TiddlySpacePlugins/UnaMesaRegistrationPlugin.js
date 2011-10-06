@@ -27,8 +27,11 @@ config.macros.TiddlySpaceRegister.register = function(username, password, form) 
 		// might have to do private recipe too...
 		
 		// include the iframe-comms script
+		var host = window.location.host,
+			parentHost = host.split('.').splice(1).join('.');
+		window.iframeCommsTarget = window.location.protocol+"//"+parentHost;
 		$(document).bind('crossDomainAjaxLoaded', function() {
-			console.log('crossDomainAjaxLoaded');
+			//console.log('crossDomainAjaxLoaded');
 			// this copied from config.macros.TiddlySpaceInclusion
 			var data = {
 				subscriptions: ["unamesa-theme"]
@@ -39,10 +42,19 @@ config.macros.TiddlySpaceRegister.register = function(username, password, form) 
 				contentType: "application/json",
 				data: $.toJSON(data),
 				success: function() {
-					console.log("subscription success");
+					//console.log("subscription success");
+					var bag = new tiddlyweb.Bag(username+"_public", window.iframeCommsTarget),
+						tiddler = new tiddlyweb.Tiddler("DefaultTiddlers", bag);
+					tiddler.text = "GettingStarted\n[[Your Handbooks]]";
+					tiddler.put(function() {
+						//console.log("DefaultTiddlers success");
+						window.location = window.location.protocol+"//"+username+"."+parentHost;	
+					}, function() {
+						//console.log("DefaultTiddlers failure");
+					});
 				},
 				error: function() {
-					console.log("subscription failure");
+					//console.log("subscription failure");
 				}
 			});
 			/* previous method - used recipe manipulation and does not work (although it does PUT the right stuff)
@@ -63,8 +75,7 @@ config.macros.TiddlySpaceRegister.register = function(username, password, form) 
 				console.log('recipe GET error',arguments);
 			});*/
 		});
-		window.iframeCommsTarget = "http://spaces.unamesa.org";
-		console.log('opening gateway to '+window.iframeCommsTarget);
+		//console.log('opening gateway to '+window.iframeCommsTarget);
 		$.getScript('/iframe-comms2.js');
 	};
 	var spaceErrback = function(xhr, error, exc) {

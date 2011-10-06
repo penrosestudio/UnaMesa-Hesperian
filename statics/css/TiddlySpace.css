@@ -1,0 +1,164 @@
+/* CSS that we restore after clearing all shadow styles, to make default bits and pieces look right */
+
+/* from DiffFormatter StyleSheet */
+.diff { white-space: pre; font-family: monospace; }
+.diff ins, .diff del { display: block; text-decoration: none; }
+.diff ins { background-color: #dfd; }
+.diff del { background-color: #fdd; }
+.diff .highlight { background-color: [[ColorPalette::SecondaryPale]]; }
+
+/* from StyleSheetColors */
+#backstageArea {background:[[ColorPalette::Foreground]]; color:[[ColorPalette::TertiaryMid]];}
+#backstageArea a {background:[[ColorPalette::Foreground]]; color:[[ColorPalette::Background]]; border:none;}
+#backstageArea a:hover {background:[[ColorPalette::SecondaryLight]]; color:[[ColorPalette::Foreground]]; }
+#backstageArea a.backstageSelTab {background:[[ColorPalette::Background]]; color:[[ColorPalette::Foreground]];}
+#backstageButton a {background:none; color:[[ColorPalette::Background]]; border:none;}
+#backstageButton a:hover {background:[[ColorPalette::Foreground]]; color:[[ColorPalette::Background]]; border:none;}
+#backstagePanel {background:[[ColorPalette::Background]]; border-color: [[ColorPalette::Background]] [[ColorPalette::TertiaryDark]] [[ColorPalette::TertiaryDark]] [[ColorPalette::TertiaryDark]];}
+.backstagePanelFooter .button {border:none; color:[[ColorPalette::Background]];}
+.backstagePanelFooter .button:hover {color:[[ColorPalette::Foreground]];}
+#backstageCloak {background:[[ColorPalette::Foreground]]; opacity:0.6; filter:'alpha(opacity=60)';}
+
+.popup {background:[[ColorPalette::TertiaryPale]]; color:[[ColorPalette::TertiaryDark]]; border-left:1px solid [[ColorPalette::TertiaryMid]]; border-top:1px solid [[ColorPalette::TertiaryMid]]; border-right:2px solid [[ColorPalette::TertiaryDark]]; border-bottom:2px solid [[ColorPalette::TertiaryDark]];}
+.popup hr {color:[[ColorPalette::PrimaryDark]]; background:[[ColorPalette::PrimaryDark]]; border-bottom:1px;}
+.popup li.disabled {color:[[ColorPalette::TertiaryMid]];}
+.popup li a, .popup li a:visited {color:[[ColorPalette::Foreground]]; border: none;}
+.popup li a:hover {background:[[ColorPalette::SecondaryLight]]; color:[[ColorPalette::Foreground]]; border: none;}
+.popup li a:active {background:[[ColorPalette::SecondaryPale]]; color:[[ColorPalette::Foreground]]; border: none;}
+.popupHighlight {background:[[ColorPalette::Background]]; color:[[ColorPalette::Foreground]];}
+
+#messageArea {border:1px solid [[ColorPalette::SecondaryMid]]; background:[[ColorPalette::SecondaryLight]]; color:[[ColorPalette::Foreground]];}
+#messageArea .button {color:[[ColorPalette::PrimaryMid]]; background:[[ColorPalette::SecondaryPale]]; border:none;}
+
+.tabSelected{color:[[ColorPalette::PrimaryDark]];
+	background:[[ColorPalette::TertiaryPale]];
+	border-left:1px solid [[ColorPalette::TertiaryLight]];
+	border-top:1px solid [[ColorPalette::TertiaryLight]];
+	border-right:1px solid [[ColorPalette::TertiaryLight]];
+}
+.tabUnselected {color:[[ColorPalette::Background]]; background:[[ColorPalette::TertiaryMid]];}
+.tabContents {color:[[ColorPalette::PrimaryDark]]; background:[[ColorPalette::TertiaryPale]]; border:1px solid [[ColorPalette::TertiaryLight]];}
+.tabContents .button {border:0;}
+
+
+.zoomer {background:none; color:[[ColorPalette::TertiaryMid]]; border:3px solid [[ColorPalette::TertiaryMid]];}
+
+.annotation {background:[[ColorPalette::SecondaryLight]]; color:[[ColorPalette::Foreground]]; border:2px solid [[ColorPalette::SecondaryMid]];}
+
+/* from StyleSheetLayout */
+.annotation {padding:0.5em; margin:0.5em;}
+
+* html #backstage {width:99%;}
+* html #backstageArea {width:99%;}
+#backstageArea {display:none; position:relative; overflow: hidden; z-index:150; padding:0.3em 0.5em;}
+#backstageToolbar {position:relative;}
+#backstageArea a {font-weight:bold; margin-left:0.5em; padding:0.3em 0.5em;}
+#backstageButton {display:none; position:absolute; z-index:175; top:0; right:0;}
+#backstageButton a {padding:0.1em 0.4em; margin:0.1em;}
+#backstage {position:relative; width:100%; z-index:50;}
+#backstagePanel {display:none; z-index:100; position:absolute; width:90%; margin-left:3em; padding:1em;}
+.backstagePanelFooter {padding-top:0.2em; float:right;}
+.backstagePanelFooter a {padding:0.2em 0.4em;}
+#backstageCloak {display:none; z-index:20; position:absolute; width:100%; height:100px;}
+
+.whenBackstage {display:none;}
+.backstageVisible .whenBackstage {display:block;}
+
+.popup {position:absolute; z-index:300; font-size:.9em; padding:0; list-style:none; margin:0;}
+.popup .popupMessage {padding:0.4em;}
+.popup hr {display:block; height:1px; width:auto; padding:0; margin:0.2em 0;}
+.popup li.disabled {padding:0.4em;}
+.popup li a {display:block; padding:0.4em; font-weight:normal; cursor:pointer;}
+
+#messageArea {position:fixed; top:2em; right:0; margin:0.5em; padding:0.5em; z-index:2000; _position:absolute;}
+.messageToolbar {display:block; text-align:right; padding:0.2em;}
+#messageArea a {text-decoration:underline;}
+
+.tabset {padding:1em 0 0 0.5em;}
+.tab {margin:0 0 0 0.25em; padding:2px;}
+.tabContents {padding:0.5em;}
+/*.tabContents ul, .tabContents ol {margin:0; padding:0;}*/
+.txtMainTab .tabContents li {list-style:none;}
+.tabContents li.listLink { margin-left:.75em;}
+
+.zoomer {font-size:1.1em; position:absolute; overflow:hidden;}
+.zoomer div {padding:1em;}
+
+/* from StyleSheetTiddler */
+div.toolbar {
+	/* visibility:hidden;
+	right:-16px; */
+}
+
+.selected div.toolbar {
+	visibility: visible;
+}
+
+/* all of StyleSheetPrint - check this looks OK */
+@media print {
+#mainMenu, #sidebar, #messageArea, .toolbar, #backstageButton, #backstageArea {display: none !important;}
+#displayArea {margin: 1em 1em 0em;}
+noscript {display:none;} /* Fixes a feature in Firefox 1.5.0.2 where print preview displays the noscript content */
+
+}
+
+#backstage, #backstageArea {
+    font-size: 1.41em;
+}
+
+#backstageArea {
+    position:absolute;
+    width:100%;
+    opacity: 0.8;
+}
+
+html, #displayArea {
+	min-height:100%;
+}
+
+#backstageButton {
+	width: 30px;
+	height: 30px;
+}
+
+/*-------------- Pop ups etc */
+
+ol.popup {
+    background-color: #fbfbfb;
+    border: 1px solid #CCCCCC;
+    color: #565656;
+	font-size: 1.1em;
+    list-style: none outside none;
+    margin: -1px 0 0;
+    padding: 10px;
+    position: absolute;
+    z-index: 300;
+	-moz-box-shadow: 1px 1px 3px #939393;
+	-webkit-box-shadow: 1px 1px 3px #939393;
+	box-shadow: 1px 1px 3px #939393;
+}
+
+ol.popup table {
+	margin: 0px;	
+}
+
+ol.popup table td {
+    font-weight: normal;
+    padding: 4px 3px;
+    text-align: left;
+}
+
+.popup li a {
+    cursor: pointer;
+    display: block;
+    font-weight: normal;
+    padding: 0.4em;
+}
+.popup li a:hover {
+	background-color: #ffd9c5;
+}
+
+.popup li a, .popup li a:visited {
+    border: medium none;
+    color: #565656;
+}
