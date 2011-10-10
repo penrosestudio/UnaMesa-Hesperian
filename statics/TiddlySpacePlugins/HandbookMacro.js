@@ -11,13 +11,14 @@ config.macros.handbook = {
 			topics = params.topics,
 			mine = params.mine,
 			host = window.location.host.split(".").splice(1).join(".");
-		if(mine) {
+		if(mine || !paramString) {
 			$.ajax({
 				url: '/spaces?mine=1',
 				dataType: 'json',
 				success: function(data) {
 					var list = [],
 						out,
+						emptyString = "you do not have any handbooks";
 						username = config.extensions.tiddlyweb.username;
 					if(data && data.length) {
 						$(data).each(function() {
@@ -28,8 +29,10 @@ config.macros.handbook = {
 						if(list.length) {
 							out = "<ul>"+list.join("\n")+"</ul>";
 						} else {
-							out = "you do not have any handbooks";
+							out = emptyString;
 						}
+					} else {
+						out = emptyString;
 					}
 					$(place).append(out);
 				}
