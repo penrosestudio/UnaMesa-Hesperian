@@ -13,6 +13,15 @@ button {
 	cursor: pointer;
 }
 
+hr {
+	color: #e9e9e9;
+	background: #e9e9e9;
+}
+
+h1 {
+	margin-bottom: 0;
+}
+
 .left {
 	float: left;
 }
@@ -21,13 +30,16 @@ button {
 	clear: both;
 }
 
+#contentWrapper {
+	overflow: hidden;
+}
+
 #mainpane {
 
 }
 
-hr {
-	color: #e9e9e9;
-	background: #e9e9e9;
+#backstage, #backstageArea {
+	font-size: 1em;
 }
 
 /**********
@@ -81,7 +93,13 @@ hr {
 	float: left;
 	font-size: 1.2em;
 	line-height: 50px;
+	height: 50px;
 }
+
+#header #SiteSubtitle {
+	font-size: 0.75em;
+}
+
 #header .menu {
 	float: right;
 	margin-top: 10px;
@@ -169,7 +187,7 @@ div.box {
 #tiddlerGettingStarted {
 	padding-bottom: 0px;
 }
-#tiddlerGettingStarted .headingPanel {
+#tiddlerGettingStarted .headingPanel .title {
 	display: none;
 }
 
