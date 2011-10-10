@@ -1,1 +1,1 @@
-cat reset.css j-base.css > aggregate.css && echo -e "\n\n[[StyleSheetTiddlySpaceRestore]]" >> aggregate.css && cat styles.css >> aggregate.css
+cat j-base.css > aggregate.css && echo -e "\n\n[[StyleSheetTiddlySpaceRestore]]" >> aggregate.css && cat styles.css >> aggregate.css

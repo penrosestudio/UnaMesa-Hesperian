@@ -131,8 +131,15 @@ a:link, a:visited, a:hover, a:active {
 
 #header form input, #header a {
 	font-size: 11px;
-    -moz-border-radius: 5px 5px 5px 5px;
-    -moz-box-shadow: 0 0 2px #000000 inset;
+  -webkit-border-radius: 5px; 
+     -moz-border-radius: 5px; 
+          border-radius: 5px; 
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; 
+    
+  -webkit-box-shadow: 0px 0px 2px #000 inset; 
+     -moz-box-shadow: 0px 0px 2px #000 inset; 
+          box-shadow: 0px 0px 2px #000 inset; 
+
     color: #000;
     padding: 5px 10px;
     text-decoration: none;
@@ -145,7 +152,9 @@ a:link, a:visited, a:hover, a:active {
 #header #loginSubmit, #header a {
 	width: auto;
 	background-color: transparent;
-	-moz-box-shadow: 0 0 10px #634434 inset;
+	-webkit-box-shadow: 0px 0px 2px #000 inset; 
+     -moz-box-shadow: 0px 0px 2px #000 inset; 
+          box-shadow: 0px 0px 2px #000 inset; 
 	color: #cd4227;
 	letter-spacing: 0.1em;
 	cursor: pointer;
@@ -170,7 +179,9 @@ a:link, a:visited, a:hover, a:active {
     border-top: 1px solid #fdf6e5;
 }
 #header #loginSubmit:active {
-    -moz-box-shadow: 0 0 5px #000000 inset;
+      -webkit-box-shadow: 0px 0px 5px #000 inset; 
+     -moz-box-shadow: 0px 0px 5px #000 inset; 
+          box-shadow: 0px 0px 5px #000 inset; 
 }
 
 #backstageButton {
