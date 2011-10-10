@@ -4,6 +4,7 @@ var admin = config.macros.TiddlySpaceAdmin,
 	tweb = config.extensions.tiddlyweb,
 	formMaker = config.extensions.formMaker,
 	$ = jQuery;
+config.extensions.formMaker.locale.tryAgain = ""; // was "try again"
 // this is mainly the same as in the default macro
 config.macros.TiddlySpaceRegister.register = function(username, password, form) {
 	var locale = admin.locale;

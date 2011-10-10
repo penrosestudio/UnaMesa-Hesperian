@@ -1,27 +1,56 @@
 /*{{{*/
 config.macros.handbook = {
 	handler: function(place, macroName, params, wikifier, paramString, tiddler) {
-		var template = store.getRecursiveTiddlerText('HandbookTemplate');
-		// find all my handbooks
-		// put them through the template
-		$.ajax({
-			url: '/spaces?mine=1',
-			dataType: 'json',
-			success: function(data) {
-				var list = ["<ul>"],
-					out;
-				if(data && data.length) {
-					$(data).each(function() {
-						list.push('<li><a href="'+this.uri+'">'+this.name+'</a></li>');
-					});
-					list.push(["</ul>"]);
-					out = list.join("\n");
-				} else {
-					out = "you do not have any handbooks";
+		var template = store.getRecursiveTiddlerText('HandbookTemplate'),
+			params = paramString.parseParams("anon")[0],
+			space = params.space,
+			title = params.title,
+			image = params.image,
+			language = params.language,
+			pages = params.pages,
+			topics = params.topics,
+			mine = params.mine,
+			host = window.location.host.split(".").splice(1).join(".");
+		if(mine) {
+			$.ajax({
+				url: '/spaces?mine=1',
+				dataType: 'json',
+				success: function(data) {
+					var list = [],
+						out,
+						username = config.extensions.tiddlyweb.username;
+					if(data && data.length) {
+						$(data).each(function() {
+							if(username !== this.name) {
+								list.push('<li><a href="'+this.uri+'">'+this.name+'</a></li>');
+							}
+						});
+						if(list.length) {
+							out = "<ul>"+list.join("\n")+"</ul>";
+						} else {
+							out = "you do not have any handbooks";
+						}
+					}
+					$(place).append(out);
 				}
-				$(place).append(out);
-			}
-		});
+			});
+		} else {
+			out = '<div class="handbook">' +
+				'<h3>'+title+'</h3>' +
+				'<div class="imgContainer">' +
+					'<div class="left">' +
+						'<a href="http://'+space+"."+host+'"><img src="'+image+'" alt="'+title+'" /></a>' +
+						'<!--<button>duplicate</button>-->' +
+					'</div>' +
+				'</div>' +
+				'<div class="meta">' +
+					'<p><strong>Language</strong>: '+language+'</p>' +
+					'<p><strong>Pages</strong>: '+pages+'</p>' +
+					'<p><strong>Topics</strong>: '+topics+'</p>' +
+				'</div>' +
+			'</div>';
+			$(place).append(out);
+		}
 	}
 };
 /*}}}*/
