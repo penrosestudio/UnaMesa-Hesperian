@@ -39,6 +39,10 @@ h1 {
 
 }
 
+#backstageArea {
+	position: fixed;
+}
+
 #backstage, #backstageArea {
 	font-size: 1em;
 }
@@ -188,15 +192,24 @@ a:link, a:visited, a:hover, a:active {
 	display: none;
 }
 
+.backstageVisible #header {
+	margin-top: 20px;
+}
+
 #tiddlerDisplay {
 	padding-top: 50px;
 }
+
+.backstageVisible #tiddlerDisplay {
+	margin-top: 70px;
+}
+
 
 button#advancedMode {
 	font-size: 10px;
     position: absolute;
     right: 5px;
-    top: 5px;
+    top: 30px;
 }
 
 /**********
@@ -295,7 +308,9 @@ h1, h2, h3, h4, h5, h6 {
 	color: #c54227;
 }
 
-
+#messageArea {
+	top: 70px;
+}
 
 
 
