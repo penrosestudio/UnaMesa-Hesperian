@@ -21,6 +21,8 @@ config.macros.loginform = {
 						usernameField.val("Error!");
 					});
 					return false;
+				}).click(function() {
+					$(this).find('input[name=username]').select();
 				});
 			} else {
 				if(!readOnly) {

@@ -5,7 +5,7 @@
 */
 var iframeHost = window.iframeCommsTarget || "http://tiddlyspace.com",
 	windowHost = window.location.host,
-	space = windowHost.substring(0,windowHost.indexOf(".")),
+	space = 'unamesa-theme', //windowHost.substring(0,windowHost.indexOf(".")),
 	host = window.location.protocol+"//"+windowHost, // "http://attn-test.tiddlyspace.com",
 	iframeURL = iframeHost+"/bags/"+space+"_public/tiddlers/iframe-comms2?host="+encodeURIComponent(host), // used to be 'attn_public' bag
 	$ = jQuery;
